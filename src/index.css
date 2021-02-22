@@ -5,7 +5,10 @@
   --clr-disabled: #E1DFE9;
   --clr-primary-dk: #363636;
   --clr-primary-lt: #F4F3F6;
+  --clr-white: #FFFFFF;
   --clr-accent: #51344D;
+
+  --br-card: 8px;
 }
 
 * {
@@ -13,9 +16,11 @@
 }
 
 html,
-body {
+body,
+#root {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 body,

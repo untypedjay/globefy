@@ -1,8 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import { getAllCountries } from './services/api/countries';
 import CountryCard from './components/CountryCard';
 import './App.css';
 import {getRandomCountry} from './util/random';
+import styled from 'styled-components';
+
+const AppStyles = styled.div`
+  background-color: var(--clr-primary-lt);
+  height: 100%;
+`;
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,10 +23,10 @@ export default function App() {
     getCountry();
   }, []);
   return (
-    <div>
+    <AppStyles>
       { isLoading ? <p>Loading...</p> :
         <CountryCard>{ country }</CountryCard>
       }
-    </div>
+    </AppStyles>
   );
 }
